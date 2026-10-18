@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **AST-Aware Chunking**: New opt-in `chunking.strategy: ast` splits Go, Python, JavaScript and TypeScript files along function, class and declaration boundaries (cAST algorithm) instead of fixed-size windows, so a chunk is usually a whole function or a group of related declarations. It requires building with the `treesitter` tag. Other builds and unknown strategy names log a warning and use the fixed-size chunker, as do other file types (#331) - @Don-Yin
+
 ## [0.37.0] - 2026-09-10
 
 ### Added
