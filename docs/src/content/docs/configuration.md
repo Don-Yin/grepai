@@ -53,8 +53,8 @@ chunking:
   size: 512
   # Overlap between chunks (for context continuity)
   overlap: 50
-  # Strategy: "fixed" (default) splits at fixed-size windows, "ast" splits at
-  # function/class boundaries with tree-sitter (needs a build with the
+  # Strategy: "fixed" (default) splits at fixed-size windows, "ast" (experimental)
+  # splits at function/class boundaries with tree-sitter (needs a build with the
   # `treesitter` tag, see Chunking Strategy below)
   strategy: fixed
   # Optional: index extra extensions beyond the built-in supported set.
@@ -261,6 +261,8 @@ chunking:
 - **More overlap**: Better continuity, larger index
 
 ### Chunking Strategy
+
+> **Experimental**: the `ast` strategy is experimental. Its behavior, defaults and chunk boundaries may change in future releases, which can require re-indexing. `fixed` remains the default and recommended strategy.
 
 ```yaml
 chunking:
