@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- **Config Edits Lost While Watching**: Preserve user changes to `.grepai/config.yaml`, including `ignore`, when saving `watch.last_index_time` after indexing (#179).
+
 ## [0.39.0] - 2026-10-25
 
 ### Added
